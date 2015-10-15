@@ -20,6 +20,9 @@ public class MemberLoginServiceImpl implements MemberLoginService {
 	@Resource(name="com.study.story.member.login.service.impl.MemberLoginMapper")
 	private MemberLoginMapper memberLoginMapper;
 
+	/**
+	 * 회원정보 가져오기
+	 */
 	@Override
 	public Map<String,Object> getLoginCheck(Map<String, Object> param) throws Exception {
 		String memberPw = (String)param.get("memberPw");

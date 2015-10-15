@@ -27,7 +27,6 @@ public class MemberLoginController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MemberLoginController.class);
 	
-	/** EgovSampleService */
 	@Resource(name = "com.study.story.member.login.service.impl.MemberLoginService")
 	private MemberLoginService memberLoginService;
 	
@@ -38,7 +37,7 @@ public class MemberLoginController {
 	 * @return
 	 */
 	@RequestMapping(value = "loginView", method = RequestMethod.GET)
-	public String index(HttpServletRequest request, Model model) {
+	public String loginView(HttpServletRequest request, Model model) {
 		return "story/member/login/loginView";
 	}
 	

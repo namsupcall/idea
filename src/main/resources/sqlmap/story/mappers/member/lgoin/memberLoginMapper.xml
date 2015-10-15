@@ -4,12 +4,11 @@
 
 <!-- 회원정보 가져오기 -->
 <select id="getMemberInfo" parameterType="map" resultType="egovMap">
-	SELECT ID			AS MEMBER_ID
-		 , PASSWORD		AS MEMBER_PW
-		 , NAME			AS MEMBER_NM
+	SELECT MEMBER_ID
+		 , MEMBER_PW
+		 , MEMBER_NM
 	  FROM MEMBER
-	 WHERE ID 		= #{memberId}
-	   AND PASSWORD = #{memberPw}
+	 WHERE MEMBER_ID = #{memberId}
 </select>
 
 </mapper>
