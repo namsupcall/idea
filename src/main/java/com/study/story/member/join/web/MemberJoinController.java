@@ -48,11 +48,13 @@ public class MemberJoinController {
 	 * @return
 	 */
 	@RequestMapping(value = "joinView", method = RequestMethod.POST)
-	public String joinViewPost(@RequestParam Map <String, Object> commandMap, Errors errors, Model model) {
-		new MemberJoinValidator().validate(commandMap, errors);
-		if (errors.hasErrors()) {
-			return "/member/join/joinView.do";
-		}
+	//http://snoopy81.tistory.com/319 참조해보기
+	public String joinViewPost(@ModelAttribute Map <String, Object> commandMap, Errors errors, Model model) {
+//	public String joinViewPost(@RequestParam Map <String, Object> commandMap, Model model) {
+//		new MemberJoinValidator().validate(commandMap, errors);
+//		if (errors.hasErrors()) {
+//			return "/member/join/joinView.do";
+//		}
 		try {
 			memberJoinService.setMemberInsert(commandMap);
 		} catch (Exception e) {

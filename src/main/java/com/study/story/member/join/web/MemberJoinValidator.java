@@ -8,8 +8,6 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import spring.RegisterRequest;
-
 /**
  * 회원 로그인
  * @author nsdeveloper
