@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.story.writing.normal.service.impl.WritingNormalMapper">
+
+<!-- 글목록 가져오기 -->
+<select id="getNormalList" parameterType="map" resultType="egovMap">
+	SELECT BOARD_SEQ
+		 , MEMBER_NO
+		 , MEMBER_NM
+		 , TITLE
+		 , CONTENT
+		 , IS_OPEN
+		 , DATE_FORMAT(REG_DATE, '%Y-%m-%d')	AS REG_DATE
+	  FROM BOARD
+	 WHERE 1 = 1
+	 <if test="memberNo == null">
+	   AND IS_OPEN = true
+	</if>
+	 ORDER BY
+	 	   BOARD_SEQ DESC
+</select>
+
+</mapper>

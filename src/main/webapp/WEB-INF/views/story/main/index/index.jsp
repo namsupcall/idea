@@ -8,6 +8,7 @@
 </head>
 <body>
 <a href="/member/login/loginView.do">로그인 페이지</a><br>
-<a href="/member/join/joinView.do">회원가입 페이지</a>
+<a href="/member/join/joinView.do">회원가입 페이지</a><br>
+<a href="/writing/normal/normalList.do">글목록</a><br>
 </body>
 </html>
